@@ -1,0 +1,30 @@
+65^17^Mote of Infinitesimal Potential (R1)^0^
+65^18^Motes of Infinitesimal Potential (R1)^0^
+65^47^アイテムのポテンシャルをランク1まで強化する^0^
+66^17^Mote of Minor Potential (R2)^0^
+66^18^Motes of Minor Potential (R2)^0^
+66^47^アイテムのポテンシャルをランク2まで強化する^0^
+67^17^Mote of Lesser Potential (R3)^0^
+67^18^Motes of Lesser Potential (R3)^0^
+67^47^アイテムのポテンシャルをランク3まで強化する^0^
+68^17^Mote of Potential (R4)^0^
+68^18^Motes of Potential (R4)^0^
+68^47^アイテムのポテンシャルをランク4まで強化する^0^
+69^17^Mote of Major Potential (R5)^0^
+69^18^Motes of Major Potential (R5)^0^
+69^47^アイテムのポテンシャルをランク5まで強化する^0^
+70^17^Mote of Greater Potential (R6)^0^
+70^18^Motes of Greater Potential (R6)^0^
+70^47^アイテムのポテンシャルをランク6まで強化する^0^
+71^17^Mote of Superior Potential (R7)^0^
+71^18^Motes of Superior Potential (R7)^0^
+71^47^アイテムのポテンシャルをランク7まで強化する^0^
+72^17^Mote of Grand Potential (R8)^0^
+72^18^Motes of Grand Potential (R8)^0^
+72^47^アイテムのポテンシャルをランク8まで強化する^0^
+73^17^Mote of Ascendant Potential (R9)^0^
+73^18^Motes of Ascendant Potential (R9)^0^
+73^47^アイテムのポテンシャルをランク9まで強化する^0^
+74^17^Mote of Infinite Potential (R10)^0^
+74^18^Motes of Infinite Potential (R10)^0^
+74^47^アイテムのポテンシャルをランク10まで強化する^0^
