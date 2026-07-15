@@ -1,0 +1,45 @@
+[project]
+name            = "eql-ja"
+version         = "0.1.0"
+description     = ""
+authors         = [ { name = "Hiroshi Miura", email = "hirmiura@gmail.com" } ]
+readme          = "README.md"
+requires-python = ">=3.14"
+dependencies    = [  ]
+
+[tool.poetry]
+packages = [ { include = "eql_ja", from = "src" } ]
+
+[build-system]
+requires      = [ "poetry-core>=2.0.0,<3.0.0" ]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pyright]
+executionEnvironments = [ { root = "src", pythonVersion = "3.14", venv = ".venv" } ]
+include               = [ "src" ]
+exclude               = [ ".git", ".venv", "**/node_modules", "**/__pycache__", "**/.*" ]
+# extraPaths            = [ ".venv/Lib/site-packages" ]
+# ignore                = [ ".venv" ]
+ignore               = [  ]
+venvPath             = "."
+reportMissingImports = "error"
+
+[tool.mypy]
+ignore_missing_imports = true
+no_implicit_optional   = true
+warn_redundant_casts   = true
+warn_unused_ignores    = false
+plugins                = [ "pydantic.mypy", "numpy.typing.mypy_plugin" ]
+
+[tool.ruff]
+include        = [ "pyproject.toml", "src/**/*.py" ]
+exclude        = [ ".git", ".venv", "**/node_modules", "**/__pycache__", "**/.*", "**/*.pyi" ]
+line-length    = 100
+target-version = "py314"
+
+[tool.ruff.lint]
+select = [ "E", "F", "W", "C", "I", "N", "D", "UP", "G", "Q" ]
+ignore = [ "D1", "D400", "D415" ]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = [ "E402" ]

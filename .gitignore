@@ -1,0 +1,17 @@
+__pycache__/
+.env
+.mypy_cache/
+.pytest_cache/
+.venv
+*.py[cod]
+*$py.class
+
+# リンク
+/eqstr_us.txt
+/eqstr_jp.txt
+# 作業用
+/debug.txt
+/eqstr_mod.txt
+/eqstr_new.txt
+/tmp*
+.~lock*
