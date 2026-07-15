@@ -32,7 +32,7 @@ def pargs() -> argparse.Namespace:
         argparse.Namespace: 処理した引数
 
     """
-    parser = argparse.ArgumentParser(description="eqstr形式のファイルをマージする")
+    parser = argparse.ArgumentParser(description="eqstr形式のファイルを操作する")
 
     # サブコマンドを管理するオブジェクトを作成
     subparsers = parser.add_subparsers(dest="command", help="利用可能なコマンド")
