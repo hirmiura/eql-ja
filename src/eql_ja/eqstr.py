@@ -300,8 +300,11 @@ class Eqstr:
 
         result: dict[int, str] = {}
         for k in self.data:
-            if k in other.data and self.data[k] != other.data[k]:
-                result[k] = self.data[k]
+            if k in other.data:
+                if self.data[k] != other.data[k]:
+                    result[k] = self.data[k]
+            else:
+                logging.warning("比較元にないデータがあります: %d", k)
         return Eqstr(result)
 
 
