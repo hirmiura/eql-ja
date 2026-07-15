@@ -97,10 +97,10 @@ def command_merge(args: argparse.Namespace) -> None:
     logger.debug("[pargs] to:     %s", args.to)
     logger.debug("[pargs] output: %s", args.output)
     with open_input(args.from_) as f:
-        es_modi = Eqstr.load(f)
+        es_f = Eqstr.load(f)
     with open_input(args.to) as f:
-        es_base = Eqstr.load(f)
-    es_result = es_modi.merge(es_base)
+        es_t = Eqstr.load(f)
+    es_result = es_t.merge(es_f)
     with open_output(args.output) as f:
         es_result.save(f)
 
@@ -281,7 +281,7 @@ class Eqstr:
 
         result: dict[int, str] = copy.deepcopy(self.data)
         for k in other.data:
-            if not (k in self.data and self.data[k] != other.data[k]):
+            if not (k in self.data and self.data[k] == other.data[k]):
                 result[k] = other.data[k]
 
         return Eqstr(result)
