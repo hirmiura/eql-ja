@@ -7,11 +7,15 @@ __pycache__/
 *$py.class
 
 # リンク
-/eqstr_us.txt
+/dbstr_jp.txt
+/dbstr_us.txt
 /eqstr_jp.txt
+/eqstr_us.txt
 # 作業用
+.~lock*
+/dbstr_mod.txt
+/dbstr_new.txt
 /debug.txt
 /eqstr_mod.txt
 /eqstr_new.txt
 /tmp*
-.~lock*
