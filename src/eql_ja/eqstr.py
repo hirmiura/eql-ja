@@ -69,7 +69,7 @@ def comparser_merge(
         metavar="FROM",
         nargs="?",
         type=str,
-        default="eqstr_jp.txt",
+        default="eqstr_mod.txt",
         help="マージ元入力ファイル",
     )
     parser.add_argument(
@@ -85,7 +85,7 @@ def comparser_merge(
         "--output",
         nargs="?",
         type=str,
-        default="-",
+        default="eqstr_jp.txt",
         help="出力ファイル",
     )
     return parser
@@ -137,7 +137,7 @@ def comparser_modified(
         "--output",
         nargs="?",
         type=str,
-        default="-",
+        default="eqstr_mod.txt",
         help="出力ファイル",
     )
     return parser
