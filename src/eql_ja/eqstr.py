@@ -96,11 +96,19 @@ def command_merge(args: argparse.Namespace) -> None:
     logger.debug("[command_merge] from:   %s", args.from_)
     logger.debug("[command_merge] to:     %s", args.to)
     logger.debug("[command_merge] output: %s", args.output)
+
+    logger.info("入力ファイル1を読み込みます: %s", args.from_)
     with open_input(args.from_) as f:
         es_f = Eqstr.load(f)
+
+    logger.info("入力ファイル2を読み込みます: %s", args.to)
     with open_input(args.to) as f:
         es_t = Eqstr.load(f)
+
+    logger.info("入力ファイル1を入力ファイル2に上書きします")
     es_result = es_t.merge(es_f)
+
+    logger.info("出力ファイルに書き出します: %s", args.output)
     with open_output(args.output) as f:
         es_result.save(f)
 
@@ -148,11 +156,19 @@ def command_modified(args: argparse.Namespace) -> None:
     logger.debug("[command_modified] modified: %s", args.modified)
     logger.debug("[command_modified] base:     %s", args.base)
     logger.debug("[command_modified] output:   %s", args.output)
+
+    logger.info("入力ファイル1を読み込みます: %s", args.modified)
     with open_input(args.modified) as f:
         es_modi = Eqstr.load(f)
+
+    logger.info("入力ファイル2を読み込みます: %s", args.base)
     with open_input(args.base) as f:
         es_base = Eqstr.load(f)
+
+    logger.info("入力ファイル1の入力ファイル2から変更された列を抽出します")
     es_result = es_modi.modified(es_base)
+
+    logger.info("出力ファイルに書き出します: %s", args.output)
     with open_output(args.output) as f:
         es_result.save(f)
 
@@ -328,7 +344,7 @@ if __name__ == "__main__":
         sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", newline="\r\n")
 
     # loggingの設定
-    logging.basicConfig(level=logging.DEBUG, format="%(levelname)s %(message)s")
+    logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     logging.addLevelName(logging.WARNING, "W")
     logging.addLevelName(logging.INFO, "I")
     logging.addLevelName(logging.DEBUG, "D")
