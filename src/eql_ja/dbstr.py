@@ -90,9 +90,9 @@ def comparser_merge(
 
 def command_merge(args: argparse.Namespace) -> None:
     """mergeコマンド"""
-    logger.debug("[pargs] from:   %s", args.from_)
-    logger.debug("[pargs] to:     %s", args.to)
-    logger.debug("[pargs] output: %s", args.output)
+    logger.debug("[command_merge] from:   %s", args.from_)
+    logger.debug("[command_merge] to:     %s", args.to)
+    logger.debug("[command_merge] output: %s", args.output)
     with open_input(args.from_) as f:
         es_f = Dbstr.load(f)
     with open_input(args.to) as f:
@@ -142,9 +142,9 @@ def comparser_modified(
 
 def command_modified(args: argparse.Namespace) -> None:
     """modifiedコマンド"""
-    logger.debug("[pargs] modified: %s", args.modified)
-    logger.debug("[pargs] base:     %s", args.base)
-    logger.debug("[pargs] output:   %s", args.output)
+    logger.debug("[command_modified] modified: %s", args.modified)
+    logger.debug("[command_modified] base:     %s", args.base)
+    logger.debug("[command_modified] output:   %s", args.output)
     with open_input(args.modified) as f:
         es_modi = Dbstr.load(f)
     with open_input(args.base) as f:
